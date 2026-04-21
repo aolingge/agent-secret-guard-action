@@ -29,4 +29,4 @@ runs:
         if [ -n "${{ inputs.output }}" ]; then
           args+=(--output "${{ inputs.output }}")
         fi
-        npx --yes agent-secret-guard@0.2.3 "${args[@]}"
+        npm exec --yes --package agent-secret-guard@0.2.3 -- agent-secret-guard "${args[@]}"
