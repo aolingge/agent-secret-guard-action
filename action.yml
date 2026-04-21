@@ -24,9 +24,11 @@ runs:
   using: composite
   steps:
     - shell: bash
+      run: npm install --global agent-secret-guard@0.2.3
+    - shell: bash
       run: |
         args=(scan "${{ inputs.path }}" --fail-on "${{ inputs.fail-on }}" --format "${{ inputs.format }}")
         if [ -n "${{ inputs.output }}" ]; then
           args+=(--output "${{ inputs.output }}")
         fi
-        npm exec --yes --package agent-secret-guard@0.2.3 -- agent-secret-guard "${args[@]}"
+        agent-secret-guard "${args[@]}"
