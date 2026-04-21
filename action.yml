@@ -1,0 +1,32 @@
+name: Agent Secret Guard
+description: Scan AI agent, MCP, and local automation repos for risky secrets and permissions.
+branding:
+  icon: shield
+  color: red
+inputs:
+  path:
+    description: Path to scan.
+    required: false
+    default: .
+  fail-on:
+    description: "Lowest severity that should fail the action: low, medium, high, or critical."
+    required: false
+    default: high
+  format:
+    description: "Output format: text, json, or sarif."
+    required: false
+    default: text
+  output:
+    description: Optional file path to write the report to.
+    required: false
+    default: ""
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      run: |
+        args=(scan "${{ inputs.path }}" --fail-on "${{ inputs.fail-on }}" --format "${{ inputs.format }}")
+        if [ -n "${{ inputs.output }}" ]; then
+          args+=(--output "${{ inputs.output }}")
+        fi
+        npx agent-secret-guard@0.2.3 "${args[@]}"
