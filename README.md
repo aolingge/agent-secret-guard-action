@@ -73,3 +73,6 @@ The action runs the npm CLI package inside your workflow. It does not upload fin
 ## License
 
 MIT
+## Support
+
+If this project saves you time, you can support future maintenance here: [Buy Me a Coffee](https://www.buymeacoffee.com/aolingge).
