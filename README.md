@@ -92,4 +92,6 @@ MIT
 
 ## Support
 
+Report wrapper execution bugs with the [bug report form](https://github.com/aolingge/agent-secret-guard-action/issues/new?template=bug_report.yml). Scanner rule requests and false-positive reports belong in the main [`agent-secret-guard`](https://github.com/aolingge/agent-secret-guard) repository.
+
 If this project saves you time, you can support future maintenance here: [Buy Me a Coffee](https://www.buymeacoffee.com/aolingge).

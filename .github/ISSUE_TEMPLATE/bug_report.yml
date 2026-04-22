@@ -1,0 +1,53 @@
+name: Bug report
+description: Report a problem with the GitHub Action wrapper.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for wrapper or GitHub Actions execution problems. Scanner rule requests belong in `aolingge/agent-secret-guard`.
+  - type: input
+    id: action-version
+    attributes:
+      label: Action version
+      description: Which action tag or commit did your workflow use?
+      placeholder: "v0.1.4"
+    validations:
+      required: true
+  - type: input
+    id: runner
+    attributes:
+      label: Runner
+      description: Which runner image or environment failed?
+      placeholder: "ubuntu-latest, windows-latest, self-hosted Linux"
+    validations:
+      required: true
+  - type: textarea
+    id: workflow-step
+    attributes:
+      label: Workflow step
+      description: Paste the smallest redacted workflow step that reproduces the problem.
+      render: yaml
+      placeholder: |
+        - uses: aolingge/agent-secret-guard-action@v0.1.4
+          with:
+            path: .
+            fail-on: high
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Redacted output
+      description: Paste only the relevant failing lines. Remove secrets, tokens, private URLs, and private paths.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect the wrapper to do?
+    validations:
+      required: true
