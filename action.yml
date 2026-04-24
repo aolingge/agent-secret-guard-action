@@ -26,9 +26,14 @@ runs:
     - shell: bash
       run: npm install --global agent-secret-guard@0.2.3
     - shell: bash
+      env:
+        AGENT_SECRET_GUARD_PATH: ${{ inputs.path }}
+        AGENT_SECRET_GUARD_FAIL_ON: ${{ inputs.fail-on }}
+        AGENT_SECRET_GUARD_FORMAT: ${{ inputs.format }}
+        AGENT_SECRET_GUARD_OUTPUT: ${{ inputs.output }}
       run: |
-        args=(scan "${{ inputs.path }}" --fail-on "${{ inputs.fail-on }}" --format "${{ inputs.format }}")
-        if [ -n "${{ inputs.output }}" ]; then
-          args+=(--output "${{ inputs.output }}")
+        args=(scan "$AGENT_SECRET_GUARD_PATH" --fail-on "$AGENT_SECRET_GUARD_FAIL_ON" --format "$AGENT_SECRET_GUARD_FORMAT")
+        if [ -n "$AGENT_SECRET_GUARD_OUTPUT" ]; then
+          args+=(--output "$AGENT_SECRET_GUARD_OUTPUT")
         fi
         agent-secret-guard "${args[@]}"
