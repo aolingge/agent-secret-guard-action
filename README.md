@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: aolingge/agent-secret-guard-action@v0.1.4
+      - uses: aolingge/agent-secret-guard-action@v0.1.5
         with:
           path: .
           fail-on: high
@@ -50,7 +50,7 @@ jobs:
 ## SARIF Example
 
 ```yaml
-- uses: aolingge/agent-secret-guard-action@v0.1.4
+- uses: aolingge/agent-secret-guard-action@v0.1.5
   with:
     path: .
     fail-on: high

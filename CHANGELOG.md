@@ -4,10 +4,11 @@ All notable changes to `agent-secret-guard-action` are documented here.
 
 The action wrapper is intentionally small. Scanner rules, CLI behavior, and remediation docs live in the main [`agent-secret-guard`](https://github.com/aolingge/agent-secret-guard) repository.
 
-## Unreleased
+## v0.1.5 - 2026-04-24
 
 - Adds a wrapper-focused bug report form for GitHub Actions execution issues.
 - Links the README support section to the wrapper issue form and the main scanner repository.
+- Passes action inputs through environment variables before invoking the scanner.
 
 ## v0.1.4 - 2026-04-21
 
