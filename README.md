@@ -78,6 +78,10 @@ To get scanner rule updates, upgrade the action tag after checking the wrapper [
 - Dangerous shell commands in agent instructions.
 - Over-permissive GitHub Actions workflows.
 
+## Launch Guides
+
+Preparing to publish an AI agent, MCP server, or automation repo? Start with the main project's [launch kit](https://github.com/aolingge/agent-secret-guard/blob/main/docs/launch-kit.md) for release copy and the [remediation guide](https://github.com/aolingge/agent-secret-guard/blob/main/docs/remediation.md) for fixing findings before release.
+
 ## Privacy
 
 The action runs the npm CLI package inside your workflow. It does not upload findings to a remote service. Treat text, JSON, and SARIF reports as sensitive artifacts because they may include private file paths or surrounding evidence.
