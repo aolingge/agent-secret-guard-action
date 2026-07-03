@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: ./
+        with:
+          path: .
+          fail-on: high
+          format: json
+          output: agent-secret-guard-report.json
+      - name: Verify report was created
+        shell: bash
+        run: test -s agent-secret-guard-report.json

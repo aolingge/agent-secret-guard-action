@@ -33,7 +33,9 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
       - uses: aolingge/agent-secret-guard-action@v0.1.5
         with:
           path: .
