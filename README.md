@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/aolingge/aolingge/main/assets/developer-cover.png" alt="Original decorative artwork for this project" width="100%" />
+</p>
+
 # Agent Secret Guard Action
 
 Run `agent-secret-guard` in GitHub Actions to scan AI agent, MCP, and local automation repositories for risky secrets and permissions.
@@ -15,6 +19,15 @@ This wrapper action is intentionally small. The scanner source, rules, docs, and
 - npm package: <https://www.npmjs.com/package/agent-secret-guard>
 - Fix guide: <https://github.com/aolingge/agent-secret-guard/blob/main/docs/remediation.md>
 - Changelog: [CHANGELOG.md](CHANGELOG.md)
+
+## Project guide
+
+| Area | Details |
+| --- | --- |
+| **For** | Repository maintainers who want Agent Secret Guard checks in GitHub Actions. |
+| **Role** | A small wrapper around the scanner; detection rules and remediation docs live in the main project. |
+| **Configuration** | Choose a scan path, severity threshold and text/JSON/SARIF output. Upgrade the action tag deliberately. |
+| **Start** | [Copy a workflow](#quick-start) · [Inputs](#inputs) · [Version policy](#version-policy) |
 
 ## Quick Start
 
