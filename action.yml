@@ -36,4 +36,5 @@ runs:
         if [ -n "$AGENT_SECRET_GUARD_OUTPUT" ]; then
           args+=(--output "$AGENT_SECRET_GUARD_OUTPUT")
         fi
-        agent-secret-guard "${args[@]}"
+        # The packaged CLI entry check does not resolve npm's Linux symlink.
+        node "$(npm root --global)/agent-secret-guard/dist/cli.js" "${args[@]}"

@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/aolingge/aolingge/main/assets/developer-cover.png" alt="AI Agent 与开发工具主题装饰插画" width="100%" />
+</p>
+
 # Agent Secret Guard Action
 
 语言： [English](README.md) | 简体中文
@@ -15,6 +19,15 @@
 - npm 包：<https://www.npmjs.com/package/agent-secret-guard>
 - 修复指南：<https://github.com/aolingge/agent-secret-guard/blob/main/docs/remediation.md>
 - 更新记录：[CHANGELOG.md](CHANGELOG.md)
+
+## 项目速览
+
+| 项目 | 说明 |
+| --- | --- |
+| **适合谁** | 想在 GitHub Actions 中接入 Agent Secret Guard 的仓库维护者。 |
+| **项目职责** | 扫描器的小型封装；检测规则与修复文档由主项目维护。 |
+| **配置内容** | 扫描路径、失败阈值与文本、JSON、SARIF 输出；升级前检查固定版本的说明。 |
+| **入口** | [English 工作流示例](README.md#quick-start) · [参数](README.md#inputs) |
 
 ## 快速开始
 
